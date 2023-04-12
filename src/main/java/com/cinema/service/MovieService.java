@@ -62,7 +62,7 @@ public class MovieService {
 		List<Movie> x = md.getAll();
 		List<Movie> y = x.stream().filter(d-> d.getReleasedYear()>=year).collect(Collectors.toList());
 		if(y.isEmpty()) {
-			throw new YearException("Invalid Year");
+			throw new YearException("Invalid");
 		}
 		else {
 			return y;
